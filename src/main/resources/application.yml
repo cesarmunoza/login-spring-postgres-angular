@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name:
+      volga3-loginV2
+  datasource:
+    url: jdbc:postgresql://localhost:5432/volga_3_db?sslMode=require
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create    # Opciones comunes: create, update, validate, none. En producción debe ser update
+#    show-sql: true         # Muestra las consultas SQL en la consola
+#jwt:
+#  secret: MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTI=
+#  expiration-time: 3600000 #una hora
