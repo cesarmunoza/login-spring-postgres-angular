@@ -1,11 +1,14 @@
 package com.bitiot.volga3_login.app.controller;
 
 import com.bitiot.volga3_login.app.models.RoleEntity;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -13,6 +16,30 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoginRequest {
-    String username;
-    String password;
+    private Long id;
+
+    private String nombre;
+
+    private String apellido;
+
+    private String username;
+
+    private String password;
+
+    private String email;
+
+    private String empresaUserId;
+
+    private Boolean userState;
+
+    private Date userCreationDate;
+
+    private String userIp;
+
+    private Integer notificacionDispositivoOffline;
+
+    private Set<RoleEntity> roles = new HashSet<>();
+
+    @Transient
+    private boolean admin;
 }
