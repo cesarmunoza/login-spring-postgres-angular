@@ -28,10 +28,10 @@ public class UserEntity implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //    @NotBlank
+    @NotBlank
     private String nombre;
 
-    //    @NotBlank
+    @NotBlank
     private String apellido;
 
     @NotBlank
@@ -43,11 +43,9 @@ public class UserEntity implements UserDetails {
     private String password;
 
     @Email
-//    @NotBlank
     @Size(max = 80)
     private String email;
 
-    //    @NotBlank
     private String empresaUserId;
 
     private Boolean userState;
